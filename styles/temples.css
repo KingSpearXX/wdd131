@@ -49,14 +49,26 @@ nav a {
     font-weight: bold;
 }
 
+nav a:hover {
+    text-decoration: underline;
+}
+
 
 main {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /*grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));*/
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+}
+
+main h2 {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 1.5em;
+    margin: 0;
+    grid-column: span 3;
 }
 
 main figure {
