@@ -49,7 +49,6 @@ main {
     background-color: white;
 }
 
-/* General Styling for Floating Windows */
 .floating-window {
     position: absolute;
     background-color: white;
@@ -86,12 +85,12 @@ main {
     right: 20px;
     background-color: white;
 }
-
-.emoticon {
-    font-size: 1.5em;
-    margin-right: 5px;
-    display: inline-block;
+.floating-window.weather h2::after {
+    content: "⛅";
+    font-size: 1.5rem;
+    margin-left: 10px; 
 }
+
 .weather-icon {
     display: none;
 }
@@ -125,26 +124,29 @@ footer p {
 
 @media screen and (max-width: 767px) {
     main {
-        flex-direction: column-reverse; /* Stack floating windows and image */
+        flex-direction: column-reverse; 
         align-items: center;
     }
     .emoticon {
         display: none;
     }
     .floating-window {
-        width: 100%; /* Ensure floating windows take full width */
-        max-width: none; /* Remove max-width */
-        padding: 15px; /* Add spacing */
-        box-shadow: none; /* Remove shadow */
-        border-radius: 0; /* Remove rounded corners */
-        position: static; /* Remove absolute positioning */
+        width: 100%;
+        max-width: none; 
+        padding: 15px; 
+        box-shadow: none; 
+        border-radius: 0; 
+        position: static; 
     }
     .floating-window h2 {
         margin-bottom: 10px;
         background-color: white;
         margin-left : 0px;
     }
-    /* Specific floating window adjustments */
+    .floating-window.weather h2::after {
+        content: ""; 
+    }
+    
     .floating-window.data {
         background-color: white;
         box-shadow: #c0c0c0 0 0 5px; 
@@ -154,16 +156,15 @@ footer p {
     }
     .weather-icon {
         display: block;
-        margin: 10px auto; /* Centers the image */
-        width: 100px; /* Adjust the size as needed */
-        height: auto; /* Maintain aspect ratio */
+        margin: 10px auto; 
+        width: 100px;
+        height: auto;
       }
       
-    /* Image should remain responsive */
     picture img {
-        width: 100%; /* Ensure the image takes full width */
-        height: auto; /* Maintain aspect ratio */
-        object-fit: cover; /* Cover the area without distortion */
-        position: relative; /* Position relative for stacking */
+        width: 100%;
+        height: auto;
+        object-fit: cover; 
+        position: relative;
     }
 }
