@@ -1,3 +1,8 @@
+:root {
+    --header-bgcolor: red;
+    --footer-bgcolor: blue;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -28,7 +33,7 @@ body {
   }
 
 header {
-    background-color: red;
+    background-color: var(--header-bgcolor);
     color: #fff;
     padding: 20px;
     height: 100px;
@@ -100,7 +105,7 @@ picture img {
 
 
 footer {
-    background-color: blue;
+    background-color: var(--footer-bgcolor);
     color: #fff;
     text-align: center;
     padding: 10px;
