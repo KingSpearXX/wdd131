@@ -18,11 +18,11 @@
         <nav>
             <button class="hamburger" onclick="toggleMenu()">☰</button>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Old</a></li>
-                <li><a href="#">New</a></li>
-                <li><a href="#">Large</a></li>
-                <li><a href="#">Small</a></li>
+                <li><a href="#" onclick="showAll()">Home</a></li>
+                <li><a href="#" onclick="filterOld()">Old</a></li>
+                <li><a href="#" onclick="filterNew()">New</a></li>
+                <li><a href="#" onclick="filterLarge()">Large</a></li>
+                <li><a href="#" onclick="filterSmall()">Small</a></li>
                 <li class="hamburger" onclick="toggleMenu()"><a href="#">☰</a></li>
             </ul>
         </nav>
@@ -31,7 +31,9 @@
 
     <main>
         <h2>Temples</h2>
-       
+        <div id="temple-grid">
+
+        </div>
     </main>
 
     <footer>

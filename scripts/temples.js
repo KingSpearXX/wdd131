@@ -93,6 +93,57 @@ const temples = [
         imageUrl:
         "https://churchofjesuschristtemples.org/assets/img/temples/_temp/029-Manila-Philippines-Temple.jpg"
     }
-
-    // Add more temple objects here...
   ];
+
+  document.onload = showAll();
+
+    function showAll() {
+        createTempleCard(document.getElementById("temple-grid"), temples);  
+    }
+    function filterOld() {
+        const filteredTemples = temples.filter(temple => parseInt(temple.dedicated.split(",")[0].trim(), 10) < 2000);
+        createTempleCard(document.getElementById("temple-grid"), filteredTemples);
+    }
+    function filterNew() {
+        const filteredTemples = temples.filter(temple => parseInt(temple.dedicated.split(",")[0].trim(), 10) >= 2000);
+        createTempleCard(document.getElementById("temple-grid"), filteredTemples);
+    }
+    function filterSmall() {
+        const filteredTemples = temples.filter(temple => temple.area < 10000);
+        createTempleCard(document.getElementById("temple-grid"), filteredTemples);
+    }
+    function filterLarge() {
+        const filteredTemples = temples.filter(temple => temple.area >= 90000);
+        createTempleCard(document.getElementById("temple-grid"), filteredTemples);
+    }
+
+    function filterByCountry(country) {
+        const filteredTemples = temples.filter(temple => temple.location.includes(country));
+        createTempleCard(document.getElementById("temple-grid"), filteredTemples);
+    }
+
+  function createTempleCard(div, temples) {
+    const templeGrid = div;
+    if (!templeGrid) {
+        console.error("No div found with id 'temple-grid'");
+        return;
+    }
+    templeGrid.innerHTML = "";
+    for(const temple of temples) {
+        const card = document.createElement("div");
+        card.classList.add("temple-card");
+        card.appendChild(document.createElement("h2")).textContent = temple.templeName;
+        card.appendChild(document.createElement("p")).textContent = temple.location;
+        card.appendChild(document.createElement("p")).textContent = "Dedicated: " + temple.dedicated;
+        card.appendChild(document.createElement("p")).textContent = "Area: " + temple.area + " sq ft";
+        const figures = document.createElement("figure");
+        const img = document.createElement("img");
+        img.src = temple.imageUrl;
+        img.alt = temple.templeName;
+        img.loading = "lazy";
+        img.classList.add("temple-image");
+        figures.appendChild(img);
+        card.appendChild(figures);
+        div.appendChild(card);
+    }
+  }
