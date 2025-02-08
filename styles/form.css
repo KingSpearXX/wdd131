@@ -1,0 +1,227 @@
+:root {
+    --header-bgcolor: #2c3e50;
+    --footer-bgcolor: #2c3e50;
+    --font-color: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: 'Exo 2', sans-serif;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8em;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    height: 100vh;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: auto 1fr auto; 
+    height: 100vh; 
+    width: 100vw; 
+  }
+
+header {
+    background-color: var(--header-bgcolor);
+    color: #fff;
+    padding: 20px;
+    height: 100px;
+    text-align: center;
+    border-bottom: #f1c40f 10px solid;
+}
+
+main {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+
+
+footer {
+    background-color: var(--footer-bgcolor);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    height: 75px;
+    font-size: 0.9em;
+}
+
+footer .highlight {
+    color: #f1c40f;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.review-container {
+    background-color: #e6d9e5;
+    padding: 20px;
+    width: 350px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.rating-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.stars, .rating {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 equal columns */
+    gap: 20px; /* Increase spacing between items */
+    justify-items: center; /* Centers stars and buttons */
+    width: 100%;
+}
+
+.stars label {
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.rating input {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid #555;
+    cursor: pointer;
+}
+
+.rating input:checked {
+    background-color: #f39c12;
+}
+
+
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+select, input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    margin-top: 5px;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    width: 100%; 
+}
+
+.checkbox-group input {
+    margin-right: 8px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.optional {
+    font-size: 0.9em;
+    color: gray;
+}
+
+button {
+    background-color: #2c3e50;
+    color: white;
+    padding: 10px;
+    border: none;
+    margin-top: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #1a252f;
+}
+
+
+.container-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+}
+
+.container-message h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50; 
+    margin-bottom: 10px;
+}
+
+.container-message p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+
+#reviewCount {
+    font-size: 20px;
+    font-weight: bold;
+    color: #f39c12; /* Gold color */
+}
+
