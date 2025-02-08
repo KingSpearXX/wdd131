@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
         addReviewButton.addEventListener('click', function(e) {
             e.preventDefault();
             addReviewCounter();
-            window.location.href = "review.html";
+            window.location.href = "https://kingspearxx.github.io/wdd131/review.html";
         });
     }
 });
