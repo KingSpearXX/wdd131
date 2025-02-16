@@ -120,6 +120,13 @@
         grid-template-columns: 1fr;
         width: 90%;
     }
+    #image-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        width: 100%;
+    }
+    
 }
 
 @media (min-width: 769px) {
